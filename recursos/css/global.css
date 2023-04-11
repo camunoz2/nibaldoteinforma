@@ -13,19 +13,24 @@
 
 .navegacion-superior {
   display: flex;
-  gap: 2;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .navegacion-superior__tiempo {
   display: flex;
-  gap: 2;
+  gap: 0.5rem;
   align-items: center;
+}
+
+.navegacion-superior__tiempo__reloj {
+  width: 15px;
+  height: 15px;
 }
 
 .navegacion-superior__rrss {
   display: flex;
-  gap: 1;
+  gap: 1rem;
 }
 
