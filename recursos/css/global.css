@@ -1,6 +1,13 @@
+/* CSS Reset */
+html, body, h1, h2, h3, h4, h5, h6, p, div, hr {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 100%;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   box-sizing: border-box;
 }
 
@@ -16,6 +23,7 @@
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 }
 
 .navegacion-superior__tiempo {
@@ -32,5 +40,18 @@
 .navegacion-superior__rrss {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
+.navegacion-superior__rrss__icon__fb {
+  width: 18px;
+  height: 18px;
+}
+.navegacion-superior__rrss__icon__ig {
+  width: 15px;
+  height: 15px;
+}
+.navegacion-superior__rrss__icon__tw {
+  width: 15px;
+  height: 15px;
+}
