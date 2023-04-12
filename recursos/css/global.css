@@ -1,5 +1,8 @@
-/* CSS Reset */
-html, body, h1, h2, h3, h4, h5, h6, p, div, hr {
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   padding: 0;
 }
@@ -18,12 +21,33 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, hr {
   }
 }
 
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+}
+
+.titulo__texto {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.titulo__bajada {
+  display: flex;
+  gap: 1rem;
+}
+
 .navegacion-superior {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
 }
 
 .navegacion-superior__tiempo {
@@ -54,4 +78,15 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, hr {
 .navegacion-superior__rrss__icon__tw {
   width: 15px;
   height: 15px;
+}
+
+.menu-principal {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  list-style: none;
+  justify-content: center;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
 }
