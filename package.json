@@ -1,0 +1,16 @@
+{
+  "name": "nibaldoteinforma-2023",
+  "version": "1.0.0",
+  "description": "Este repositorio esta hecho para que los alumnos del liceo nibaldo de portezuelo, aprendan sobre desarrollo web con HTML + CSS + Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server --files recursos/css/**/*.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1"
+  }
+}

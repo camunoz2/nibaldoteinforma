@@ -1,8 +1,14 @@
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -91,7 +97,6 @@ h1,h2,h3,h4,h5,h6,p {
   border-bottom: 3px solid black;
 }
 
-
 .contenedor-noticias-destacadas-sup {
   display: flex;
   gap: 1rem;
@@ -114,7 +119,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .noticia-superior__texto__subtitulo {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .noticia-superior__imagen {
