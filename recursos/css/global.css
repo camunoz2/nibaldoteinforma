@@ -1,3 +1,5 @@
+/* ///////////////////////  GLOBALES /////////////////////////////   */
+
 body {
   font-family: "Playfair Display", serif;
 }
@@ -27,6 +29,7 @@ p {
   }
 }
 
+/* ///////////////////////  ENCABEZADO /////////////////////////////   */
 .titulo {
   display: flex;
   flex-direction: column;
@@ -39,6 +42,12 @@ p {
 .titulo__texto {
   font-size: 5rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo__texto {
+    font-size: 2rem;
+  }
 }
 
 .titulo__bajada {
@@ -97,10 +106,23 @@ p {
   border-bottom: 3px solid black;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-principal {
+    font-size: 0.8rem;
+  }
+}
+
 .contenedor-noticias-destacadas-sup {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
   padding: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-noticias-destacadas-sup {
+    flex-wrap: wrap;
+  }
 }
 
 .noticia-superior {
