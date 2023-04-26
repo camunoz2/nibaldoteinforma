@@ -1,4 +1,4 @@
-# Repo para el sitio web del liceo nibaldo sepúlveda ferández.
+# Repo para el sitio del periodico online del liceo nibaldo sepúlveda fernandez.
 
 Este repositorio esta hecho para que los alumnos del liceo nibaldo de portezuelo, aprendan sobre desarrollo web con HTML + CSS + Javascript.
 
