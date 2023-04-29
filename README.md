@@ -31,3 +31,4 @@ Los pasos a seguir para arrancar el servidor (y empezar a colaborar en el proyec
 ## Pendientes>
 
 1. Como primera tarea de Javascript, hay que implementar una fecha para que se muestre en la parte superior.
+2. Como proyecto final tenemos que implementar una solucion mejor que copiar y pegar todo el HTML para tener una nueva pagina. Hay mejores maneras de hacer esto, pero lo mas probable es que lo descubran al finalizar el segundo semestre.
