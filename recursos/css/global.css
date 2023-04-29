@@ -15,6 +15,7 @@ p {
   padding: 0;
 }
 
+
 .container {
   width: 100%;
   max-width: 1376px;
@@ -108,6 +109,12 @@ p {
   border-bottom: 3px solid black;
 }
 
+
+.menu-principal > li:hover{
+  cursor: pointer; 
+  color: blue;
+}
+
 @media screen and (max-width: 768px) {
   .menu-principal {
     font-size: 0.8rem;
@@ -142,6 +149,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.noticia-superior__texto:hover {
+ color: blue; 
+ cursor: pointer;
 }
 
 .noticia-superior__texto__titulo {
@@ -195,6 +207,15 @@ p {
   align-items: center;
   margin-left: 1rem;
   gap: 1rem;
+}
+
+.noticias-destacadas__lado_contenedor {
+  display: flex-col;
+  gap: 2rem;
+}
+
+.anuncio {
+  height: 175px;
 }
 
 /* Componentes Interfaz */
