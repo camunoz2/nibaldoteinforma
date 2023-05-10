@@ -21,7 +21,7 @@ const { frontmatter, url } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
   <div class="grid grid-cols-4 gap-12 mt-10">
-    <article class="col-span-3">
+    <article class="col-span-4 md:col-span-3">
       <p>{frontmatter.tags}</p>
       <h1 class="text-4xl font-bold italic pb-8">
         {frontmatter.title}
@@ -38,7 +38,7 @@ const { frontmatter, url } = Astro.props;
           <p>Facebook</p>
         </aside>
         <div
-          class="prose prose-p:text-xl prose-h1:text-4xl prose-h1:italic prose-h1:font-bold prose-h2:text-2xl col-span-3 prose-li:font-sans prose-li:text-xl"
+          class="prose prose-p:text-xl prose-h1:text-4xl prose-h1:italic prose-h1:font-bold prose-h2:text-2xl col-span-4 md:col-span-3 prose-li:font-sans prose-li:text-xl"
         >
           <slot />
         </div>
