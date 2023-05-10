@@ -33,7 +33,7 @@ const { frontmatter, url } = Astro.props;
         <img src={frontmatter.imgUrl} alt={frontmatter.title} />
       </div>
       <div class="grid grid-cols-4 gap-6 pt-12">
-        <aside class="col-span-1">
+        <aside class="hidden md:block col-span-1">
           <h6>Compartir la noticia</h6>
           <p>Facebook</p>
         </aside>
@@ -45,7 +45,7 @@ const { frontmatter, url } = Astro.props;
       </div>
     </article>
 
-    <aside class="col-span-1">
+    <aside class="hidden md:block col-span-1">
       <SectionTitle title="Últimas" />
       {
         posts.map((post) => (
