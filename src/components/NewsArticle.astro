@@ -1,0 +1,29 @@
+---
+interface Props {
+  withImage: boolean;
+  imgUrl?: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+const { withImage, title, description, imgUrl, link } = Astro.props;
+---
+
+<article>
+  {withImage ? <img src={imgUrl} alt="destacada" /> : ""}
+  <slot />
+  <h4 class="font-bold text-3xl mb-3 hover:underline">
+    <a href={link}>
+      {title}
+    </a>
+  </h4>
+  <p class="text-lg leading-tight mb-3">
+    {description}
+  </p>
+  <a
+    href={link}
+    class="uppercase text-xs font-bold hover:bg-black hover:text-white p-2 rounded-sm transition-colors ease-in-out"
+    >leer más</a
+  >
+</article>

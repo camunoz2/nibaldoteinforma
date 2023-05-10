@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+}
+import Navigation from "../components/Navigation.astro";
+import Title from "../components/Title.astro";
+import TopNav from "../components/TopNav.astro";
+
+const allPosts = await Astro.glob("../pages/noticias/*.md");
+const categories = [
+  ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+];
+
+const { title } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nibaldo Informa | {title}</title>
+  </head>
+  <body class="bg-slate-200 py-4 md:py-10">
+    <div class="bg-white container mx-auto p-4 md:p-10">
+      <header>
+        <TopNav />
+        <Title />
+        <Navigation />
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer
+        class="flex flex-col md:flex-row gap-4 justify-around border-t-2 border-double border-t-gray-400 pt-10 mt-10"
+      >
+        <h4 class="text-4xl"><a href="/">El Nibaldiano</a></h4>
+        {
+          categories.map((cat) => (
+            <li class="list-none">
+              <a href={`/categorias/${cat}`}>{cat}</a>
+            </li>
+          ))
+        }
+      </footer>
+    </div>
+  </body>
+</html>

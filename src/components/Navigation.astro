@@ -1,0 +1,27 @@
+---
+const allPosts = await Astro.glob("../pages/noticias/*.md");
+const categories = [
+  ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+];
+---
+
+<nav
+  class="hidden md:block border-b-2 border-b-black border-t-2 border-t-slate-400 border-double"
+>
+  <ul class="text-xl flex gap-6 justify-center my-2">
+    <li
+      class="p-2 bg-white hover:bg-black hover:text-white rounded-sm transition-all ease-in-out"
+    >
+      <a href="/">Inicio</a>
+    </li>
+    {
+      categories.map((cat) => {
+        return (
+          <li class="p-2 hover:bg-black hover:text-white rounded-sm transition-all ease-in-out">
+            <a href={`/categorias/${cat}`}>{cat}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

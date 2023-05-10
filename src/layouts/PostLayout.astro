@@ -1,0 +1,64 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import NewsArticle from "../components/NewsArticle.astro";
+import SmallTags from "../components/SmallTags.astro";
+import BaseLayout from "./BaseLayout.astro";
+const posts = await Astro.glob("../pages/noticias/*.md");
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  date: string;
+  description: string;
+  author: string;
+  imgUrl: string;
+  tags: string[];
+}>;
+
+const { frontmatter, url } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <div class="grid grid-cols-4 gap-12 mt-10">
+    <article class="col-span-3">
+      <p>{frontmatter.tags}</p>
+      <h1 class="text-4xl font-bold italic pb-8">
+        {frontmatter.title}
+      </h1>
+      <div class="py-6 border-y-[1px] border-y-gray-100">
+        <p>{frontmatter.date}<span> // {frontmatter.author}</span></p>
+      </div>
+      <div class="mt-10">
+        <img src={frontmatter.imgUrl} alt={frontmatter.title} />
+      </div>
+      <div class="grid grid-cols-4 gap-6 pt-12">
+        <aside class="col-span-1">
+          <h6>Compartir la noticia</h6>
+          <p>Facebook</p>
+        </aside>
+        <div
+          class="prose prose-p:text-xl prose-h1:text-4xl prose-h1:italic prose-h1:font-bold prose-h2:text-2xl col-span-3 prose-li:font-sans prose-li:text-xl"
+        >
+          <slot />
+        </div>
+      </div>
+    </article>
+
+    <aside class="col-span-1">
+      <SectionTitle title="Últimas" />
+      {
+        posts.map((post) => (
+          <NewsArticle
+            title={post.frontmatter.title}
+            link={post.url}
+            withImage={false}
+            description={post.frontmatter.description}
+          >
+            <SmallTags tags={post.frontmatter.tags} />
+          </NewsArticle>
+        ))
+      }
+    </aside>
+  </div>
+</BaseLayout>

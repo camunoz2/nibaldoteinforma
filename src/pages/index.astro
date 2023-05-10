@@ -1,0 +1,73 @@
+---
+import NewsArticle from "../components/NewsArticle.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Ad from "../components/Ad.astro";
+import SmallTags from "../components/SmallTags.astro";
+import BigTags from "../components/BigTags.astro";
+//@ts-ignore
+import * as destacada from "../pages/noticias/palabras-directora.md";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const posts = await Astro.glob("./noticias/*.md");
+---
+
+<BaseLayout title="El periódico escolar">
+  <div class="grid grid-cols-6 mt-4 md:mt-10 pb-12">
+    <div class="hidden md:block md:col-span-1">
+      <SectionTitle title="Últimas" />
+      {
+        posts.map((post) => (
+          <NewsArticle
+            title={post.frontmatter.title}
+            link={post.url}
+            withImage={false}
+            description={post.frontmatter.description}
+          >
+            <SmallTags tags={post.frontmatter.tags} />
+          </NewsArticle>
+        ))
+      }
+    </div>
+
+    <div class="col-span-6 md:col-span-5 pl-0 md:pl-4">
+      <div class="grid grid-cols-3 gap-6">
+        <div class="col-span-3 md:col-span-2 pl-0 md:pl-12 flex flex-col gap-6">
+          <SectionTitle title="Destacada" />
+
+          <NewsArticle
+            title={destacada.frontmatter.title}
+            link={destacada.url}
+            description={destacada.frontmatter.description}
+            withImage={true}
+            imgUrl={destacada.frontmatter.imgUrl}
+          >
+            <BigTags tags={destacada.frontmatter.tags} />
+          </NewsArticle>
+
+          <hr />
+
+          {
+            posts.map((post) => (
+              <NewsArticle
+                title={post.frontmatter.title}
+                link={post.url}
+                withImage={false}
+                description={post.frontmatter.description}
+              >
+                <BigTags tags={post.frontmatter.tags} />
+              </NewsArticle>
+            ))
+          }
+        </div>
+        <aside class="hidden md:block md:col-span-1">
+          <SectionTitle title="Anuncios" />
+          <div class="flex flex-col gap-6">
+            <Ad image="/ad1.jpg" title="Mercado" />
+            <Ad image="/ad2.jpg" title="Mercado 2" />
+            <Ad image="/ad3.jpg" title="Mercado 3" />
+            <Ad image="/ad4.jpg" title="Mercado 4" />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

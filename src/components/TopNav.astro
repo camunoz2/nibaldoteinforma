@@ -1,0 +1,25 @@
+---
+const monthNames = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
+const today = new Date();
+const dd = String(today.getDate());
+const mm = String(today.getMonth());
+const yy = String(today.getFullYear());
+---
+
+<div class="flex justify-between mb-12">
+  <p>{dd} de {monthNames[mm]} {yy}</p>
+  <a href="mailto:nibaldoinforma@liceonibaldo.cl">Contacto</a>
+</div>

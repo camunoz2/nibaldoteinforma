@@ -1,0 +1,14 @@
+---
+interface Props {
+  image: string;
+  title: string;
+}
+
+const { image, title } = Astro.props;
+---
+
+<img
+  src={image}
+  class="object-contain grayscale hover:grayscale-0 transition-all"
+  alt={title}
+/>
