@@ -8,4 +8,5 @@ export default defineConfig({
   site: "https://nibaldoteinforma.cl",
   integrations: [tailwind()],
   adapter: vercelServerless(),
+  output: "server",
 });
