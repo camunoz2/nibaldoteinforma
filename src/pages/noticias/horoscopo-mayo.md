@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: "Horoscopo Mes de mayo"
+title: "Horoscopo"
 date: 09 de Mayo, 2023
-description: "Revisa el horoscopo de este mes."
+description: "Revisa el horóscopo."
 author: "Loreto Valenzuela"
 imgUrl: "/noticias/horoscopo.jpg"
 tags: ["Entretención"]

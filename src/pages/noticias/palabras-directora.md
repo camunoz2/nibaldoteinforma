@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: "Palabras de la Directora"
 date: 09 de Mayo, 2023
-description: "Señorita Macarena Soledad Martínez Fernández, directora del establecimiento nos da algunas palabras por su pasar por portezuelo."
+description: "Señorita Macarena Soledad Martínez Fernández, directora del establecimiento nos da algunas palabras por su pasar por Portezuelo."
 author: "Loreto Valenzuela"
 imgUrl: "/noticias/directora.jpg"
 tags: ["Personajes"]
