@@ -5,7 +5,7 @@ date: 14 de Mayo, 2023
 description: "Club de Deportes Ñublense busca en Portezuelo nuevos jugadores para su plantel."
 author: "Loreto Valenzuela"
 imgUrl: "/noticias/talentos-futbol.jpg"
-tags: ["deportes"]
+tags: ["Deportes"]
 ---
 
 # “CLUB DEPORTIVO ÑUBLENSE BUSCA TALENTOS PORTEZOLANOS”
